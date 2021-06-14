@@ -5,6 +5,7 @@ class AppNav extends HTMLElement {
 
   render() {
     this.innerHTML = `
+    <a id="hamburger" href="javascript:void(0)">☰</a>
     <nav id="drawer">
       <div class="navbar">
         <div class="navbar-brand">
@@ -16,7 +17,7 @@ class AppNav extends HTMLElement {
               <a id="home-link" href="/" aria-label="link menuju home">Home</a>
             </li>
             <li>
-              <a id="fav" href="#" aria-label="link menuju favorite">Favorite</a>
+              <a id="fav" href="#/favorite" aria-label="link menuju favorite">Favorite</a>
             </li>
             <li>
               <a id="about-me" aria-label="menuju halaman tentang kami" target="_blank" href="https://agussutarom.wordpress.com">About Us</a>
