@@ -10,7 +10,7 @@ class AppGrid extends HTMLElement {
   }
 
   renderError(message) {
-    this.innerHTML = "Error terjadi " + message;
+    this.innerHTML = `Error terjadi ${message}`;
   }
 
   connectedCallback() {
