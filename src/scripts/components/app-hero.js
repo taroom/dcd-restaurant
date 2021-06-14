@@ -2,6 +2,7 @@ class AppHero extends HTMLElement {
   connectedCallback() {
     this.render();
   }
+
   render() {
     this.innerHTML = `
             <section class="hero" aria-label="bagian herp">
