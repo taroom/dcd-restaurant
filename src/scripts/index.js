@@ -5,7 +5,7 @@ import "./components/app-hero";
 import "./components/app-nav";
 import "./components/app-grid";
 import "./components/app-grid-item";
-import Data from "./basedata/getdata";
+import Data from "./data/getdata";
 
 // membuat sebuah function untuk mengambil data dan memasang ke grid
 const callDataFunction = () => {
