@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+html,
+body,
+main {
+  height: 100%;
+  width: 100%;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+main {
+  width: 100%;
+  height: 120px;
+  background-color: #a0937d;
+}
+
+/* skip to main */
+.skip-to-main {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  padding: 8px;
+  z-index: 4;
+}
+
+.skip-to-main:focus {
+  top: 0;
+}
+
+/* navigation */
+#hamburger {
+  display: none;
+}
+
+#drawer {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  height: 4em;
+  background: white;
+  top: 0;
+  left: 0;
+}
+
+#drawer.open {
+  transform: translate(0, 0);
+}
+
+.navbar {
+  display: flex;
+  height: 64px;
+  align-items: center;
+}
+.navbar-brand {
+  font-size: 20px;
+  padding-left: 1em;
+}
+
+.navbar .drawer-menu {
+  margin-left: auto;
+  padding-right: 1em;
+}
+
+.navbar .drawer-menu ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.navbar .drawer-menu a {
+  color: #000000;
+  height: 100%;
+  padding: 15px 10px;
+  text-decoration: none;
+}
+
+.navbar .drawer-menu a:hover {
+  color: rgb(86, 74, 74);
+}
+
+/* https://colorhunt.co/palette/282007 */
+/* hero */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 550px;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("/images/heros/hero-image_1.jpg");
+  background-size: cover;
+}
+
+.hero .overlay {
+  position: absolute;
+  background-color: rgba(245, 92, 71, 0.7);
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+
+.hero .hero-title {
+  color: white;
+  font-size: 2.5em;
+  font-weight: 600;
+  z-index: 2;
+}
+
+/* footer */
+footer {
+  background: rgb(86, 74, 74);
+  color: antiquewhite;
+  padding: 1em;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+.app-grid-wrap {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 10px auto;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+/* card */
+.card {
+  margin: 15px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 15px 15px 23px -23px rgba(0, 0, 0, 0.57);
+}
+
+.card .card-img {
+  position: relative;
+}
+
+.card .card-img .bottom-corner {
+  background-color: rgba(159, 230, 160, 0.95);
+  padding: 1em;
+  text-align: center;
+}
+
+.card .card-img .top-corner span {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.card img {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card .card-body {
+  padding: 15px;
+}
+
+.card .card-body h3 {
+  margin-bottom: 1rem;
+}
+
+.card .card-body .rate {
+  display: block;
+  border-radius: 15px;
+  background-color: rgba(74, 169, 108, 1);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 1em;
+  margin: 1em;
+  text-align: center;
+}
+
+.card .card-body .rate img {
+  margin-right: 5px;
+  width: 12px;
+  height: 12px;
+}
+
+.description p {
+  font-size: 17px;
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+@media only screen and (max-width: 600px) {
+  #main-place {
+    width: 100%;
+    margin: 0;
+  }
+
+  .app-grid-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #hamburger {
+    display: block;
+    padding: 0.28em 0.5em;
+    font-size: 32px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    z-index: 3;
+    position: fixed;
+    width: 2em;
+    background: #9b3d3d;
+    height: 2em;
+    border-radius: 0 0 1em;
+  }
+
+  #drawer {
+    width: 250px;
+    height: 100%;
+    /* menyembunyikan #drawer -250px (sesuai dengan ukuran lebar drawer) ke kiri */
+    transform: translate(-250px, 0);
+    transition: transform 0.3s ease-in-out;
+    background-color: rgba(74, 169, 108, 1);
+    color: white;
+  }
+
+  #drawer .navbar .drawer-menu {
+    position: absolute;
+    top: 3em;
+    left: 1em;
+    color: white;
+    z-index: 3;
+    transition: visibility 0.1s, opacity 0.1s linear;
+  }
+
+  .navbar .drawer-menu ul {
+    display: block !important;
+    margin: auto;
+  }
+  .navbar .drawer-menu ul li {
+    text-align: center;
+    padding: 15px;
+  }
+
+  .navbar .drawer-menu ul li a {
+    font-size: 1em;
+    color: #fff;
+  }
+
+  .navbar .drawer-menu ul li a:hover {
+    color: rgb(86, 74, 74);
+  }
+}
