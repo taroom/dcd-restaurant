@@ -15,6 +15,7 @@
     "linebreak-style": "off",
     "no-underscore-dangle": "off",
     "class-methods-use-this": "off",
+    "prefer-promise-reject-errors": "off",
     "operator-linebreak": "off",
     "indent": "off"
   }
