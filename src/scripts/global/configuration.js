@@ -1,5 +1,5 @@
 const CONFIGURATION = {
-  KEY: 1,
+  KEY: 12345,
   BASE_URL: "https://restaurant-api.dicoding.dev/",
   BASE_URL_IMAGE: "https://restaurant-api.dicoding.dev/images",
   CACHE_NAME: "RestaurantMama-v1",
