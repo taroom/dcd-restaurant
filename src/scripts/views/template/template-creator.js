@@ -1,4 +1,30 @@
 import CONFIGURATION from "../../globals/configuration";
+import extractNameFromObject from "../../utils/extract-name-from-object";
+
+const _mappingList = (arrObj) => {
+  let innerLi = "";
+  arrObj.forEach((element) => {
+    innerLi += `<li>${element}</li>`;
+  });
+  return innerLi;
+};
+
+const _display3Review = (arrObj) => {
+  let innerReview = "";
+  for (let i = 0; i < arrObj.length; i++) {
+    const element = arrObj[i];
+    innerReview += `
+            <div class="card-review">
+                <p><u>${element.date} oleh <b>${element.name}</b></u></p>
+                <p>${element.review}</p>
+            </div>
+        `;
+    if (i === 2) {
+      break;
+    }
+  }
+  return innerReview;
+};
 
 const createRestaurantDetailTemplate = (resto) => `
       <img src="${
@@ -15,6 +41,15 @@ const createRestaurantDetailTemplate = (resto) => `
       <h3 tabindex="0">
           ${resto.name}
       </h3>
+
+      <p>${resto.address}, ${resto.city}</p>
+
+      kategori : ${extractNameFromObject(resto.categories)} <br>
+      Menu Makanan : <br>
+      <ul>${_mappingList(extractNameFromObject(resto.menus.foods))}</ul>
+      Menu Minuman : <br>
+      <ul>${_mappingList(extractNameFromObject(resto.menus.drinks))}</ul>
+
       <div class="description">
           <p tabindex="0">${resto.description}</p>
       </div>
@@ -25,6 +60,24 @@ const createRestaurantDetailTemplate = (resto) => `
             Rating : ${resto.rating}
           </span>
       </div>
+
+      <div id="review-area">${_display3Review(resto.customerReviews)}</div>
 `;
 
-export default createRestaurantDetailTemplate;
+const displayLikeButtonTemplate = () => `
+    <button aria-label="like this movie" id="likeButton" class="like">
+        <i class="fa fa-heart-o" aria-hidden="true"></i>
+    </button>
+    `;
+
+const displayLikedButtonTemplate = () => `
+    <button aria-label="unlike this movie" id="likeButton" class="like">
+        <i class="fa fa-heart" aria-hidden="true"></i>
+    </button>
+    `;
+
+export {
+  createRestaurantDetailTemplate,
+  displayLikeButtonTemplate,
+  displayLikedButtonTemplate,
+};
