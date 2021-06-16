@@ -2,12 +2,26 @@ import RestaurantApiHandler from "../../data/restaurant-api-handler";
 
 const Home = {
   async render() {
-    return `<h1>Halaman Beranda</h1>`;
+    return ``;
   },
   async afterRender() {
     // fungsi after render
-    const restaurant = await RestaurantApiHandler.list();
-    console.log(restaurant);
+    const restoContainer = document.querySelector("app-grid");
+
+    const fallbackResult = (message) => {
+      restoContainer.fallbackResult(message);
+    };
+
+    const renderResult = (results) => {
+      restoContainer.grids = results;
+    };
+
+    try {
+      const restaurant = await RestaurantApiHandler.list();
+      renderResult(restaurant);
+    } catch (message) {
+      fallbackResult(message);
+    }
   },
 };
 
