@@ -9,7 +9,7 @@ const _mappingList = (arrObj) => {
   return innerLi;
 };
 
-const _display3Review = (arrObj) => {
+const _displayReview = (arrObj, limit) => {
   let innerReview = "";
   for (let i = 0; i < arrObj.length; i++) {
     const element = arrObj[i];
@@ -19,7 +19,7 @@ const _display3Review = (arrObj) => {
                 <p>${element.review}</p>
             </div>
         `;
-    if (i === 2) {
+    if (limit !== 0 && i === limit - 1) {
       break;
     }
   }
@@ -61,7 +61,7 @@ const createRestaurantDetailTemplate = (resto) => `
           </span>
       </div>
 
-      <div id="review-area">${_display3Review(resto.customerReviews)}</div>
+      <div id="review-area">${_displayReview(resto.customerReviews, 3)}</div>
 `;
 
 const displayLikeButtonTemplate = () => `
