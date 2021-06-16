@@ -14,7 +14,7 @@ class AppNav extends HTMLElement {
         <div class="drawer-menu" id="drawer-menu">
           <ul>
             <li>
-              <a id="home-link" href="/" aria-label="link menuju home">Home</a>
+              <a id="home-link" href="#/home" aria-label="link menuju home">Home</a>
             </li>
             <li>
               <a id="fav" href="#/favorite" aria-label="link menuju favorite">Favorite</a>
