@@ -7,7 +7,6 @@ const Home = {
   async afterRender() {
     // fungsi after render
     const restoContainer = document.querySelector("app-grid");
-
     const fallbackResult = (message) => {
       restoContainer.fallbackResult(message);
     };
