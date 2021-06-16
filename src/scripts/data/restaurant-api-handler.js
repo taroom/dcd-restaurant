@@ -2,19 +2,19 @@ import API from "../globals/api";
 import CONFIGURATION from "../globals/configuration";
 
 class RestaurantApiHandler {
-  static async listRestaurant() {
+  static async list() {
     const response = await fetch(API.LIST);
     const responseJson = await response.json();
     return responseJson.restaurants;
   }
 
-  static async detailRestaurant(id) {
+  static async detail(id) {
     const response = await fetch(API.DETAIL(id));
     const responseJson = await response.json();
     return responseJson.restaurant;
   }
 
-  static async searchRestaurant(query) {
+  static async search(query) {
     const response = await fetch(API.SEARCH(query));
     const responseJson = await response.json();
     return responseJson.restaurants;
