@@ -7,6 +7,7 @@ import "./components/app-grid";
 import "./components/app-grid-item";
 import "./components/app-loader";
 import App from "./views/app";
+import swRegister from "./utils/sw-register";
 
 const app = new App({ content: document.querySelector("#main-place") });
 
@@ -16,4 +17,5 @@ window.addEventListener("hashchange", () => {
 
 window.addEventListener("load", () => {
   app.renderPage();
+  swRegister();
 });
