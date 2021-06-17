@@ -62,6 +62,7 @@ const createRestaurantDetailTemplate = (resto) => `
       </div>
 
       <div id="review-area">${_displayReview(resto.customerReviews, 3)}</div>
+      <button id="btn-show" class="btn-show">Tampilkan Semua Review</button>
       
 `;
 
@@ -81,4 +82,5 @@ export {
   createRestaurantDetailTemplate,
   displayLikeButtonTemplate,
   displayLikedButtonTemplate,
+  _displayReview,
 };

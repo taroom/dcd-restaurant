@@ -58,6 +58,11 @@ main {
   visibility: visible;
 }
 
+.hide {
+  visibility: hidden;
+  display: none;
+}
+
 img#loaderico {
   width: 25px;
   visibility: visible;
