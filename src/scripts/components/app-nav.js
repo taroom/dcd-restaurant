@@ -17,7 +17,7 @@ class AppNav extends HTMLElement {
               <a id="home-link" href="#/home" aria-label="link menuju home">Home</a>
             </li>
             <li>
-              <a id="fav" href="#/favorite" aria-label="link menuju favorite">Favorite</a>
+              <a id="fav" href="#/favourite" aria-label="link menuju favorite">Favorite</a>
             </li>
             <li>
               <a id="about-me" aria-label="menuju halaman tentang kami" target="_blank" href="https://agussutarom.wordpress.com">About Us</a>

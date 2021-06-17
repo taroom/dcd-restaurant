@@ -1,4 +1,4 @@
-const Favorite = {
+const Favourite = {
   async render() {
     return `<h1>Halaman Favorite</h1>`;
   },
@@ -7,4 +7,4 @@ const Favorite = {
   },
 };
 
-export default Favorite;
+export default Favourite;
