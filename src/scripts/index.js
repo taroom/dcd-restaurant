@@ -5,7 +5,6 @@ import "./components/app-hero";
 import "./components/app-nav";
 import "./components/app-grid";
 import "./components/app-grid-item";
-import "./components/app-loader";
 import App from "./views/app";
 import swRegister from "./utils/sw-register";
 

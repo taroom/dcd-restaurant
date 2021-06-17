@@ -1,8 +1,11 @@
 import FavouriteRestaurantIdb from "../../data/favourite-restaurant-idb";
+import LoaderInitiator from "../../utils/loader-initiator";
 
 const Favourite = {
   async render() {
-    return ``;
+    return `
+    <app-grid></app-grid>
+    `;
   },
   async afterRender() {
     const restoContainer = document.querySelector("app-grid");
@@ -15,6 +18,10 @@ const Favourite = {
       restoContainer.grids = results;
     };
 
+    LoaderInitiator.init();
+
+    LoaderInitiator.showLoader();
+
     try {
       const restaurant = await FavouriteRestaurantIdb.getAllRestaurants();
 
@@ -26,6 +33,8 @@ const Favourite = {
     } catch (message) {
       fallbackResult(message);
     }
+
+    LoaderInitiator.hideLoader();
   },
 };
 

@@ -1,11 +1,18 @@
 import RestaurantApiHandler from "../../data/restaurant-api-handler";
+import LoaderInitiator from "../../utils/loader-initiator";
 
 const Home = {
   async render() {
-    return ``;
+    return `
+    <app-grid></app-grid>
+    `;
   },
+
   async afterRender() {
     // fungsi after render
+    LoaderInitiator.init();
+
+    LoaderInitiator.showLoader();
     const restoContainer = document.querySelector("app-grid");
     const fallbackResult = (message) => {
       restoContainer.fallbackResult(message);
@@ -21,6 +28,8 @@ const Home = {
     } catch (message) {
       fallbackResult(message);
     }
+
+    LoaderInitiator.hideLoader();
   },
 };
 
