@@ -62,6 +62,7 @@ const createRestaurantDetailTemplate = (resto) => `
       </div>
 
       <div id="review-area">${_displayReview(resto.customerReviews, 3)}</div>
+      
 `;
 
 const displayLikeButtonTemplate = () => `
