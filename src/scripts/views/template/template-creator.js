@@ -65,14 +65,14 @@ const createRestaurantDetailTemplate = (resto) => `
 `;
 
 const displayLikeButtonTemplate = () => `
-    <button aria-label="like this movie" id="likeButton" class="like">
-        <i class="fa fa-heart-o" aria-hidden="true"></i>
+    <button aria-label="tambahkan restoran ke daftar favorite" id="likeButton" class="like">
+        Tambahkan Ke Favorite
     </button>
     `;
 
 const displayLikedButtonTemplate = () => `
-    <button aria-label="unlike this movie" id="likeButton" class="like">
-        <i class="fa fa-heart" aria-hidden="true"></i>
+    <button aria-label="hapus restoran dari daftar favorite" id="likeButton" class="like">
+        Hapus Dari Favorite
     </button>
     `;
 
