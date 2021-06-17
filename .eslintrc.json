@@ -18,6 +18,7 @@
     "prefer-promise-reject-errors": "off",
     "operator-linebreak": "off",
     "indent": "off",
-    "no-plusplus": "off"
+    "no-plusplus": "off",
+    "no-restricted-globals": "off"
   }
 }
