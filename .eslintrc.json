@@ -11,8 +11,10 @@
   },
   "rules": {
     "no-console": "off",
+    "comma-dangle": "off",
     "quotes": "off",
     "linebreak-style": "off",
+    "no-alert": "off",
     "no-underscore-dangle": "off",
     "class-methods-use-this": "off",
     "prefer-promise-reject-errors": "off",
