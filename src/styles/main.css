@@ -94,6 +94,10 @@ main {
   top: 0;
 }
 
+.card-link-title {
+  text-decoration: none;
+}
+
 /* navigation */
 #hamburger {
   display: none;
