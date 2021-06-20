@@ -4,6 +4,7 @@ import LoaderInitiator from "../../utils/loader-initiator";
 const Home = {
   async render() {
     return `
+    <h1 class="txt-center" tabindex="0">Explore Restaurant</h1>
     <app-grid></app-grid>
     `;
   },
