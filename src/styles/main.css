@@ -96,6 +96,7 @@ main {
 
 .card-link-title {
   text-decoration: none;
+  min-height: 44px;
 }
 
 /* navigation */
