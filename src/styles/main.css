@@ -195,6 +195,14 @@ footer {
   text-align: center;
 }
 
+/* dish */
+.dish-wrap {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 10px auto;
+}
+
 .app-grid-wrap {
   width: 80%;
   display: grid;
@@ -202,8 +210,19 @@ footer {
   margin: 10px auto;
 }
 
+.app-detail-wrap {
+  width: 80%;
+  margin: 10px auto;
+}
+
 .txt-center {
   text-align: center;
+}
+
+.city-text {
+  background-color: #9b3d3d;
+  padding: 1em;
+  color: #fff;
 }
 
 /* card */
@@ -278,6 +297,10 @@ footer {
   }
 
   .app-grid-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .dish-wrap {
     grid-template-columns: 1fr;
   }
 }

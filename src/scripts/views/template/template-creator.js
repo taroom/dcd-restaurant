@@ -32,23 +32,27 @@ const createRestaurantDetailTemplate = (resto) => `
           ? `${CONFIGURATION.BASE_URL_IMAGE}/large/${resto.pictureId}`
           : "https://picsum.photos/id/666/800/450?grayscale"
       }" style="width:100%" tabindex="0" alt="Foto Restaurant ${resto.name}">
-      <div class="bottom-corner">
+      <div class="city-text txt-center">
           <span tabindex="0" aria-label="Restaurant ${
             resto.name
-          } terletak di kota ${resto.city}">${resto.city}</span>
+          } terletak di kota ${resto.city}">${resto.address}, ${
+  resto.city
+}</span>
       </div>
-  
-      <h3 tabindex="0">
-          ${resto.name}
-      </h3>
-
-      <p>${resto.address}, ${resto.city}</p>
 
       kategori : ${extractNameFromObject(resto.categories)} <br>
-      Menu Makanan : <br>
-      <ul>${_mappingList(extractNameFromObject(resto.menus.foods))}</ul>
-      Menu Minuman : <br>
-      <ul>${_mappingList(extractNameFromObject(resto.menus.drinks))}</ul>
+
+      <div class="dish-wrap">
+        <div class="food-section">
+          Menu Makanan : <br>
+          <ul>${_mappingList(extractNameFromObject(resto.menus.foods))}</ul>
+        </div>
+
+        <div class="drink-section">
+          Menu Minuman : <br>
+          <ul>${_mappingList(extractNameFromObject(resto.menus.drinks))}</ul>
+        </div>
+      </div>
 
       <div class="description">
           <p tabindex="0">${resto.description}</p>

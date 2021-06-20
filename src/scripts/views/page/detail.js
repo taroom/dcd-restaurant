@@ -10,20 +10,23 @@ import {
 const Detail = {
   async render() {
     return `
-    <div id="restaurant-one"></div>
-    <div id="likeButtonContainer"></div>
+    <h1 class="txt-center" id="restaurant-name" tabindex="0"></h1>
+    <div class="app-detail-wrap">
+      <div id="restaurant-one"></div>
+      <div id="likeButtonContainer"></div>
 
-    <p><b>Add Review</b></p>
-    <div class="tambah-review">
-        <div class="inputan">
-            <p class="label">Nama</p>
-            <input class="input" type="text" id="name" name="name" placeholder="Nama Kamu.."></input>
-        </div>
-        <div class="inputan">
-            <p class="label">Review</p>
-            <textarea class="input" type="text" id="review" name="review" placeholder="Review Kamu.."></textarea>
-        </div>
-        <button id="btn-submit">Submit</button>
+      <p><b>Add Review</b></p>
+      <div class="tambah-review">
+          <div class="inputan">
+              <p class="label">Nama</p>
+              <input class="input" type="text" id="name" name="name" placeholder="Nama Kamu.."></input>
+          </div>
+          <div class="inputan">
+              <p class="label">Review</p>
+              <textarea class="input" type="text" id="review" name="review" placeholder="Review Kamu.."></textarea>
+          </div>
+          <button id="btn-submit" class="btn-44">Submit</button>
+      </div>
     </div>
     `;
   },
@@ -36,7 +39,9 @@ const Detail = {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
 
     const restaurantDetail = await RestaurantApiHandler.detail(url.id);
+    const restoName = document.querySelector("#restaurant-name");
     const restoContainer = document.querySelector("#restaurant-one");
+    restoName.innerHTML = restaurantDetail.name;
     restoContainer.innerHTML = createRestaurantDetailTemplate(restaurantDetail);
 
     const reviewContainer = document.querySelector("#review-area");
