@@ -99,6 +99,10 @@ main {
   min-height: 44px;
 }
 
+.btn-44 {
+  min-height: 44px;
+}
+
 /* navigation */
 #hamburger {
   display: none;

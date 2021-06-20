@@ -62,18 +62,18 @@ const createRestaurantDetailTemplate = (resto) => `
       </div>
 
       <div id="review-area">${_displayReview(resto.customerReviews, 3)}</div>
-      <button id="btn-show" class="btn-show">Tampilkan Semua Review</button>
+      <button id="btn-show" class="btn-44 btn-show">Tampilkan Semua Review</button>
       
 `;
 
 const displayLikeButtonTemplate = () => `
-    <button aria-label="tambahkan restoran ke daftar favorite" id="likeButton" class="like">
+    <button aria-label="tambahkan restoran ke daftar favorite" id="likeButton" class="like btn-44">
         Tambahkan Ke Favorite
     </button>
     `;
 
 const displayLikedButtonTemplate = () => `
-    <button aria-label="hapus restoran dari daftar favorite" id="likeButton" class="like">
+    <button aria-label="hapus restoran dari daftar favorite" id="likeButton" class="like btn-44">
         Hapus Dari Favorite
     </button>
     `;
