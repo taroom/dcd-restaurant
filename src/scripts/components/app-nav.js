@@ -5,7 +5,7 @@ class AppNav extends HTMLElement {
 
   render() {
     this.innerHTML = `
-    <a id="hamburger" href="javascript:void(0)">☰</a>
+    <button id="hamburger">☰</button>
     <nav id="drawer">
       <div class="navbar">
         <div class="navbar-brand">
