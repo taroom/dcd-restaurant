@@ -12,17 +12,17 @@ const Detail = {
     return `
     <h1 class="txt-center" id="restaurant-name" tabindex="0"></h1>
     <div class="app-detail-wrap">
-      <div id="restaurant-one"></div>
+      <div id="restaurant-one" tabindex="0"></div>
       <div id="likeButtonContainer"></div>
 
-      <p><b>Add Review</b></p>
+      <p tabindex="0"><b>Add Review</b></p>
       <div class="tambah-review">
           <div class="inputan">
-              <p class="label">Nama</p>
+              <p class="label" tabindex="0">Nama</p>
               <input class="input width-full" type="text" id="name" name="name" placeholder="Nama Kamu.."></input>
           </div>
           <div class="inputan">
-              <p class="label">Review</p>
+              <p class="label" tabindex="0">Review</p>
               <textarea class="input width-full" type="text" id="review" name="review" placeholder="Review Kamu.."></textarea>
           </div>
           <button id="btn-submit" class="btn-44">Submit</button>

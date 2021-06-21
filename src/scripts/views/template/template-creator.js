@@ -15,8 +15,8 @@ const _displayReview = (arrObj, limit) => {
     const element = arrObj[i];
     innerReview += `
             <div class="card-review">
-                <p><u>${element.date} oleh <b>${element.name}</b></u></p>
-                <p>${element.review}</p>
+                <p tabindex="0"><u>${element.date} oleh <b>${element.name}</b></u></p>
+                <p tabindex="0">${element.review}</p>
             </div>
         `;
     if (limit !== 0 && i === limit - 1) {
@@ -40,15 +40,17 @@ const createRestaurantDetailTemplate = (resto) => `
 }</span>
       </div>
 
+      <span tabindex="0">
       kategori : ${extractNameFromObject(resto.categories)} <br>
+      </span>
 
-      <div class="dish-wrap">
-        <div class="food-section">
+      <div class="dish-wrap" tabindex="0">
+        <div class="food-section" tabindex="0">
           Menu Makanan : <br>
           <ul>${_mappingList(extractNameFromObject(resto.menus.foods))}</ul>
         </div>
 
-        <div class="drink-section">
+        <div class="drink-section" tabindex="0">
           Menu Minuman : <br>
           <ul>${_mappingList(extractNameFromObject(resto.menus.drinks))}</ul>
         </div>
