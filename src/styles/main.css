@@ -103,6 +103,10 @@ main {
   min-height: 44px;
 }
 
+.width-full {
+  width: 100%;
+}
+
 /* navigation */
 #hamburger {
   display: none;
@@ -225,6 +229,12 @@ footer {
   color: #fff;
 }
 
+/* input */
+
+.input {
+  padding: 10px 20px;
+}
+
 /* card */
 .card {
   margin: 15px;
@@ -278,6 +288,13 @@ footer {
   margin-right: 5px;
   width: 12px;
   height: 12px;
+}
+
+.card-review {
+  padding: 15px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 15px 15px 23px -23px rgba(0, 0, 0, 0.57);
 }
 
 .description p {

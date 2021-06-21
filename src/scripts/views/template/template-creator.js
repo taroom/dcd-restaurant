@@ -57,6 +57,7 @@ const createRestaurantDetailTemplate = (resto) => `
       <div class="description">
           <p tabindex="0">${resto.description}</p>
       </div>
+      
       <div class="rate">                  
           <span tabindex="0" aria-label="Rating Restaurant ${
             resto.name
