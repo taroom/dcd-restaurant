@@ -27,13 +27,10 @@ class AppGridItem extends HTMLElement {
       this._grid.city
     }</span>
               </div>
+              <a tabindex="0" class="link-none" href="${`/#/detail/${this._grid.id}`}">
+              <div class="card-link-title"> ${this._grid.name} </div></a>
           </div>
           <div class="card-body">
-              <h3 tabindex="0">
-                  <a class="card-link-title" href="${`/#/detail/${this._grid.id}`}">${
-      this._grid.name
-    }</a>
-              </h3>
               <div class="description">
                   <p tabindex="0">${this._grid.description}</p>
               </div>

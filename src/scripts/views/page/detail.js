@@ -19,11 +19,11 @@ const Detail = {
       <div class="tambah-review">
           <div class="inputan">
               <p class="label" tabindex="0">Nama</p>
-              <input class="input width-full" type="text" id="name" name="name" placeholder="Nama Kamu.."></input>
+              <input class="input height-50 width-full" type="text" id="name" name="name" placeholder="Nama Kamu.."></input>
           </div>
           <div class="inputan">
               <p class="label" tabindex="0">Review</p>
-              <textarea class="input width-full" type="text" id="review" name="review" placeholder="Review Kamu.."></textarea>
+              <textarea class="input height-100 width-full" type="text" id="review" name="review" placeholder="Review Kamu.."></textarea>
           </div>
           <button id="btn-submit" class="btn-44">Submit</button>
       </div>

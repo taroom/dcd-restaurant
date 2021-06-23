@@ -94,9 +94,17 @@ main {
   top: 0;
 }
 
-.card-link-title {
+.link-none {
   text-decoration: none;
-  min-height: 44px;
+}
+
+.card-link-title {
+  height: 44px;
+  font-size: 20px;
+  padding-top: 5px;
+  color: #fff;
+  text-align: center;
+  background-color: #a0937d;
 }
 
 .btn-44 {
@@ -305,6 +313,14 @@ footer {
   -webkit-line-clamp: 4;
   display: -webkit-box;
   -webkit-box-orient: vertical;
+}
+
+.height-100 {
+  height: 100px;
+}
+
+.height-50 {
+  height: 50px;
 }
 
 @media only screen and (max-width: 600px) {
