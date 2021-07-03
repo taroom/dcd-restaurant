@@ -80,7 +80,7 @@ const displayLikeButtonTemplate = () => `
     `;
 
 const displayLikedButtonTemplate = () => `
-    <button aria-label="hapus restoran dari daftar favorite" id="likeButton" class="like btn-44">
+    <button aria-label="hapus restoran dari daftar favorite" id="likedButton" class="like btn-44">
         Hapus Dari Favorite
     </button>
     `;

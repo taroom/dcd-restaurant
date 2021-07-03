@@ -4,6 +4,7 @@ import LoaderInitiator from "../../utils/loader-initiator";
 const Favourite = {
   async render() {
     return `
+    <h1 id="header-title-restaurant" class="txt-center" tabindex="0">Restaurant Favourite</h1>
     <app-grid></app-grid>
     `;
   },
@@ -26,11 +27,14 @@ const Favourite = {
       const restaurant = await FavouriteRestaurantIdb.getAllRestaurants();
 
       if (restaurant.length === 0) {
-        fallbackResult("Tidak ada restaurant favorite");
+        fallbackResult(
+          `<div class="empty-favourite"><div class="container-title">Belum Ada Restaurant Favorite Yang Dimasukan</div></div>`
+        );
       } else {
         renderResult(restaurant);
       }
     } catch (message) {
+      console.log(message);
       fallbackResult(message);
     }
 
