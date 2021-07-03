@@ -13,6 +13,10 @@ class AppGrid extends HTMLElement {
     this.innerHTML = `Error terjadi ${message}`;
   }
 
+  fallbackResult(message) {
+    this.innerHTML = `${message}`;
+  }
+
   connectedCallback() {
     this.render();
   }
