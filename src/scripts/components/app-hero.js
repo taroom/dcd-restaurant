@@ -5,7 +5,7 @@ class AppHero extends HTMLElement {
 
   render() {
     this.innerHTML = `
-            <section class="hero" aria-label="bagian herp">
+            <section class="hero" aria-label="bagian hero">
               <div class="overlay"></div>
               <h1 class="hero-title">Restaurant Mama</h1>
             </section>
