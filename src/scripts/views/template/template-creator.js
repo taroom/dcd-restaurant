@@ -27,7 +27,7 @@ const _displayReview = (arrObj, limit) => {
 };
 
 const createRestaurantDetailTemplate = (resto) => `
-      <img src="${
+      <img class="lazyload" data-src="${
         resto.pictureId
           ? `${CONFIGURATION.BASE_URL_IMAGE}/large/${resto.pictureId}`
           : "https://picsum.photos/id/666/800/450?grayscale"

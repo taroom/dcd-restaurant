@@ -5,6 +5,8 @@ import "./components/app-hero";
 import "./components/app-nav";
 import "./components/app-grid";
 import "./components/app-grid-item";
+import "lazysizes";
+import "lazysizes/plugins/parent-fit/ls.parent-fit";
 import App from "./views/app";
 import swRegister from "./utils/sw-register";
 

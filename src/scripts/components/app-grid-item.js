@@ -13,7 +13,7 @@ class AppGridItem extends HTMLElement {
     this.innerHTML = `
       <div class="card">
           <div class="card-img">
-              <img src="${
+              <img class="lazyload" data-src="${
                 this._grid.pictureId
                   ? `${CONFIGURATION.BASE_URL_IMAGE}/small/${this._grid.pictureId}`
                   : "https://picsum.photos/id/666/800/450?grayscale"
