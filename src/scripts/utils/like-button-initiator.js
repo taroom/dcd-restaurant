@@ -7,21 +7,21 @@ import {
 const LikeButtonInitiator = {
   async init({ likeButtonContainer, restaurant }) {
     this.likeButtonContainer = likeButtonContainer;
-    this.restaurant = restaurant;
+    this._restaurant = restaurant;
 
     await this.renderButton();
   },
 
   async renderButton() {
-    const { id } = this.restaurant;
-    if (await this.isRestaurantExist(id)) {
+    const { id } = this._restaurant;
+    if (await this._isRestaurantExist(id)) {
       this.renderLiked();
     } else {
       this.renderLike();
     }
   },
 
-  async isRestaurantExist(id) {
+  async _isRestaurantExist(id) {
     const restaurant = await FavouriteRestaurantIdb.getRestaurant(id);
     return !!restaurant;
   },
@@ -31,7 +31,7 @@ const LikeButtonInitiator = {
 
     const likeButton = document.querySelector("#likeButton");
     likeButton.addEventListener("click", async () => {
-      await FavouriteRestaurantIdb.putRestaurant(this.restaurant);
+      await FavouriteRestaurantIdb.putRestaurant(this._restaurant);
       this.renderButton();
     });
   },
@@ -41,7 +41,7 @@ const LikeButtonInitiator = {
 
     const likeButton = document.querySelector("#likedButton");
     likeButton.addEventListener("click", async () => {
-      await FavouriteRestaurantIdb.deleteRestaurant(this.restaurant.id);
+      await FavouriteRestaurantIdb.deleteRestaurant(this._restaurant.id);
       this.renderButton();
     });
   },

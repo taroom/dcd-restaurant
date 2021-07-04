@@ -27,7 +27,7 @@ Scenario("menyukai satu restaurant", async ({ I }) => {
   const firstRestaurant = locate(".card-link-title").first();
   const firstRestaurantTitle = await I.grabTextFrom(firstRestaurant);
 
-  I.scrollTo("#header-title-restaurant");
+  // I.scrollTo("#header-title-restaurant");
   I.waitForClickable(firstRestaurantLink, 2);
   I.click(firstRestaurantLink);
 
@@ -55,7 +55,7 @@ Scenario("Batal menyukai 1 restaurant ", async ({ I }) => {
   const firstRestaurant = locate(".card-link-title").first();
   const firstRestaurantTitle = await I.grabTextFrom(firstRestaurant);
 
-  I.scrollTo("#header-title-restaurant");
+  // I.scrollTo("#header-title-restaurant");
   I.waitForClickable(firstRestaurantLink, 2);
   I.click(firstRestaurantLink);
 
