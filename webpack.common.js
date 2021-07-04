@@ -1,6 +1,9 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const ServiceWorkerWebpackPlugin = require("serviceworker-webpack-plugin");
+const ImageminWebpackPlugin = require("imagemin-webpack-plugin").default;
+const imageminPngquant = require("imagemin-pngquant");
+const imageminMozjpeg = require("imagemin-mozjpeg");
 const path = require("path");
 
 module.exports = {
@@ -41,11 +44,25 @@ module.exports = {
         {
           from: path.resolve(__dirname, "src/public/"),
           to: path.resolve(__dirname, "dist/"),
+          globOptions: {
+            ignore: ["**/images/heros/**"], // CopyWebpackPlugin mengabaikan berkas yang berada di dalam folder images/heros
+          },
         },
       ],
     }),
     new ServiceWorkerWebpackPlugin({
       entry: path.resolve(__dirname, "src/scripts/sw.js"),
+    }),
+    new ImageminWebpackPlugin({
+      plugins: [
+        imageminMozjpeg({
+          quality: 80,
+          progressive: true,
+        }),
+        imageminPngquant({
+          quality: [0.5, 0.75],
+        }),
+      ],
     }),
   ],
 };
